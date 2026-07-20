@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://era.app/help/mcp-server-era-context
+docs: https://era.app/help/mcp-server-era-context
+summary:
+  types: [oauth2, apiKey]
+  oauth2_flows: [authorizationCode]
+  oauth2_version: OAuth 2.1
+  pkce: S256
+  dynamic_client_registration: true
+  notes: OAuth 2.1 is the default for MCP clients; API keys are supported in developer
+    tools.
+schemes:
+- name: OAuth2
+  type: oauth2
+  source: https://context.era.app/.well-known/oauth-authorization-server
+  issuer: https://forge.era.app
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://forge.era.app/oauth/authorize
+    tokenUrl: https://forge.era.app/oauth/token
+    registrationUrl: https://forge.era.app/oauth/register
+    code_challenge_methods: [S256]
+    grant_types: [authorization_code, refresh_token]
+    token_endpoint_auth_methods: [none]
+    scope_count: 10
+    scopes_ref: scopes/era-scopes.yml
+- name: ApiKey
+  type: apiKey
+  in: header
+  source: developer tools (per help documentation)
+  notes: Supported for developer tooling; OAuth 2.1 is the default for end-user MCP clients.
