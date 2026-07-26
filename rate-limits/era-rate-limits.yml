@@ -1,0 +1,15 @@
+generated: '2026-07-19'
+method: searched
+source: https://era.app/pricing
+signal: Daily agent-call quota, enforced per plan tier on the Era Context MCP server.
+unit: agent calls
+window: per day
+limits:
+- plan: Basic
+  limit_count: 250
+- plan: Organize
+  limit_count: 1000
+- plan: Automate
+  limit_count: 10000
+- plan: Operate
+  limit_count: 25000

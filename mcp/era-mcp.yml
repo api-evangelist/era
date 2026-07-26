@@ -1,0 +1,148 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://era.app/help/mcp-server-era-context
+server_card: https://era.app/.well-known/mcp/server-card.json
+server:
+  name: Era Context
+  version: 1.0.0
+  description: AI-native personal finance management. Connect bank accounts, analyze
+    spending, forecast cash flow, automate transactions, and manage your money through
+    natural conversation via MCP.
+  homepage: https://era.app
+  transport: streamable-http
+  url: https://context.era.app
+  mcp_endpoint: https://context.era.app/mcp
+  protocol_version: '2024-11-05'
+  capabilities:
+    tools: true
+    resources: true
+    prompts: false
+auth:
+  type: oauth2
+  spec: OAuth 2.1 (PKCE S256, Dynamic Client Registration)
+  authorization_url: https://forge.era.app/oauth/authorize
+  token_url: https://forge.era.app/oauth/token
+  registration_url: https://forge.era.app/oauth/register
+  protected_resource: https://context.era.app/mcp
+  scopes_doc: well-known/era-context-oauth-protected-resource.json
+# 65 production-registered tools; up to 63 available to ordinary assistants depending
+# on plan, OAuth scopes, connected accounts, and MCP client support (catalog 2026-07-13).
+tool_count: 65
+safety_model:
+  read_only: cannot modify data
+  write_capable: allow data modification
+  destructive: require explicit user confirmation
+  extra_consent: mandate a separate authorization flow (e.g. billing writes)
+  plan_gated: unavailable on lower plan tiers
+  hard_boundaries:
+  - agents receive no bank credentials
+  - transfers between a user's own accounts require explicit approval per action
+  - agents cannot pay bills, place trades, or file taxes
+tools:
+  knowledge:
+  - name: knowledge__confirm_or_reject_inference
+    description: Validate or dismiss inferred financial facts
+  - name: knowledge__defer_question
+    description: Postpone answering pending financial questions
+  - name: knowledge__forget
+    description: Remove stored financial facts (destructive)
+  - name: knowledge__get_financial_context_and_overview
+    description: Retrieve financial summary and context
+  - name: knowledge__get_pending_questions
+    description: List unanswered financial questions
+  - name: knowledge__recall_history
+    description: View history of stored financial facts
+  - name: knowledge__remember
+    description: Store new financial facts
+  - name: knowledge__reset_pack_questions
+    description: Clear pending questions (destructive)
+  - name: knowledge__show_question_ui
+    description: Display question form interface
+  accounts:
+  - name: accounts__check_account_balance
+    description: View current account balance
+  - name: accounts__list_financial_accounts
+    description: Retrieve all connected accounts
+  - name: accounts__manage_account
+    description: Modify account settings (destructive capable)
+  - name: accounts__manage_account_groups
+    description: Organize accounts into groups (plan-gated)
+  - name: accounts__set_account_visibility
+    description: Control account inclusion in analysis
+  - name: accounts__toggle_balance_backfill
+    description: Enable/disable historical balance data
+  connections:
+  - name: connections__connect_bank_account
+    description: Initiate bank-linking flow
+  - name: connections__disconnect_institution
+    description: Remove bank connection (destructive)
+  - name: connections__trigger_connection_resync
+    description: Force account data refresh
+  transactions:
+  - name: transactions__import_csv_transactions
+    description: Bulk upload transaction data
+  - name: transactions__list_recurring_charges
+    description: Identify subscription patterns
+  - name: transactions__list_spending_categories
+    description: Display category taxonomy
+  - name: transactions__list_transactions
+    description: Retrieve transaction records
+  - name: transactions__manage_automation_rules
+    description: Create/modify auto-tagging rules
+  - name: transactions__manage_categories
+    description: Customize spending categories
+  - name: transactions__manage_manual_transaction
+    description: Batch edit transactions (destructive)
+  - name: transactions__manage_transaction_tags
+    description: Apply/remove transaction labels
+  - name: transactions__manage_transfer_links
+    description: Link inter-account transfers
+  - name: transactions__search_transactions
+    description: Query transactions by criteria
+  - name: transactions__update_transactions
+    description: Modify selected transaction fields
+  insights:
+  - name: insights__analyze_spending
+    description: Categorize and summarize expenses
+  - name: insights__compare_spending_periods
+    description: Show period-to-period changes
+  - name: insights__forecast_spending
+    description: Project future spending patterns
+  - name: insights__get_cash_flow
+    description: Calculate net money movement
+  - name: insights__get_daily_category_spending
+    description: Daily category breakdowns
+  - name: insights__get_daily_financial_summary
+    description: Daily account overview
+  billing:
+  - name: billing__cancel_subscription
+    description: Terminate Era subscription (extra consent)
+  - name: billing__confirm_subscription_change
+    description: Approve plan modification (extra consent, plan-gated)
+  - name: billing__get_current_plan
+    description: Display active plan details
+  - name: billing__list_plans
+    description: Show available plan options
+  - name: billing__manage
+    description: Access billing portal (extra consent, plan-gated)
+  - name: billing__preview_subscription_change
+    description: Show cost impact before change (plan-gated)
+  - name: billing__uncancel_subscription
+    description: Reactivate cancelled subscription (extra consent)
+  - name: billing__upgrade
+    description: Change to higher plan tier (extra consent)
+  referral:
+  - name: referral__get_dashboard_sso
+    description: Access referral analytics dashboard
+  - name: referral__get_referral_link
+    description: Retrieve shareable referral URL
+  - name: referral__get_referral_stats
+    description: Display referral program metrics
+  - name: referral__join_referral_program
+    description: Enroll in referral tracking
+  - name: referral__switch_referral_campaign
+    description: Change active referral campaign
+  help:
+  - name: help__get_help
+    description: Retrieve platform guidance and FAQs

@@ -1,0 +1,43 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://context.era.app",
+      "service-desc": [
+        {
+          "href": "https://era.app/.well-known/mcp/server-card.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://era.app/help/mcp-server-era-context",
+          "type": "text/html"
+        },
+        {
+          "href": "https://era.app/llms.txt",
+          "type": "text/plain"
+        },
+        {
+          "href": "https://era.app/llms-full.txt",
+          "type": "text/plain"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://context.era.app/.well-known/oauth-protected-resource",
+          "type": "application/json"
+        },
+        {
+          "href": "https://context.era.app/.well-known/oauth-authorization-server",
+          "type": "application/json"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://context.era.app/health",
+          "type": "text/plain"
+        }
+      ]
+    }
+  ]
+}

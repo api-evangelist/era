@@ -1,0 +1,36 @@
+generated: '2026-07-19'
+method: searched
+source: https://context.era.app/.well-known/oauth-protected-resource
+docs: https://era.app/help/mcp-server-era-context
+authorization_server: https://forge.era.app
+schemes:
+- name: OAuth2
+  source: https://context.era.app/.well-known/oauth-authorization-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://forge.era.app/oauth/authorize
+    tokenUrl: https://forge.era.app/oauth/token
+    registrationUrl: https://forge.era.app/oauth/register
+    pkce: S256
+scopes:
+- scope: mcp:discovery
+  description: Discover the Era Context MCP server and its tool catalog
+- scope: mcp:tools-basic
+  description: Invoke read-oriented (basic) MCP tools
+- scope: mcp:tools-write
+  description: Invoke write-capable MCP tools (account/transaction modifications)
+- scope: mcp:billing-write
+  description: Perform billing changes (subscription upgrade/cancel/manage); required
+    separately from other write scopes and gated by extra consent
+- scope: mcp:resources-read
+  description: Read MCP resources exposed by the server
+- scope: offline_access
+  description: Obtain a refresh token for long-lived, offline agent access
+- scope: banking:read
+  description: Read connected banking data (balances, accounts, transactions)
+- scope: banking:write
+  description: Modify banking-related data (rules, categories, transaction fields, transfer links)
+- scope: social:read
+  description: Read social/referral program data
+- scope: social:write
+  description: Modify social/referral program data

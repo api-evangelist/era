@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://era.app/help/mcp-server-era-context
+summary: Cross-cutting semantics for the Era Context MCP server. Era exposes all
+  capability as MCP tools over Streamable HTTP rather than a REST surface, so the
+  conventions below are the agent-facing contract.
+interface:
+  protocol: MCP (Model Context Protocol)
+  transport: streamable-http
+  endpoint: https://context.era.app/mcp
+  protocol_version: '2024-11-05'
+authentication:
+  style: OAuth 2.1 authorization-code + PKCE (S256), Dynamic Client Registration
+  ref: authentication/era-authentication.yml
+  scopes_ref: scopes/era-scopes.yml
+consent_and_safety:
+  model: tool-level safety tiers enforced server-side
+  tiers:
+  - read_only: cannot modify data
+  - write_capable: modifies data; requires a write scope
+  - destructive: requires explicit per-action user confirmation
+  - extra_consent: requires a separate authorization flow (billing writes)
+  boundaries:
+  - agents never receive bank credentials
+  - transfers between a user's own accounts require explicit approval per action
+  - agents cannot pay bills, place trades, or file taxes
+plan_gating:
+  description: Tool availability is filtered by the user's plan, granted OAuth scopes,
+    connected accounts, and MCP client support. Certain tools require a minimum plan
+    (e.g. account groups and billing management require Organize or higher).
+  ref: plans/era-plans.yml
+rate_limiting:
+  style: daily agent-call quota per plan tier
+  ref: rate-limits/era-rate-limits.yml
+idempotency:
+  documented: false
+  notes: Era does not publish an idempotency-key contract; write safety is instead
+    enforced via per-action confirmation for destructive tools.
+memory_model:
+  description: Era stores a portable, cross-agent financial memory (facts, goals,
+    preferences) that any connected MCP client can read and manage via the knowledge__*
+    tools; users can view/edit/remove any stored fact.

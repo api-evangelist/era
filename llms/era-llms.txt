@@ -1,0 +1,63 @@
+# Era
+
+> Era is an AI-native personal finance platform. Connect your bank accounts to any AI assistant — Claude, ChatGPT, Gemini, Cursor, or any MCP-compatible agent — and manage your money through natural conversation. Available in the US, UK, and Canada.
+
+Era connects to financial institutions via secure integrations and exposes every capability through MCP (Model Context Protocol). Features include spending analysis, cash flow forecasting, automated transaction categorization, custom rules, and personalized financial guidance.
+
+## Product
+
+- [Homepage](https://era.app): Overview of Era's AI-native personal finance platform
+- [Context MCP server documentation](https://era.app/help/mcp-server-era-context): Setup guide, safety model, workflow examples, and public tool catalog for Era Context
+- [Pricing](https://era.app/pricing): Four tiers — See (free), Organize, Automate, and Optimize
+- [Company](https://era.app/company): About the team behind Era
+
+## Context MCP server
+
+- [Context MCP server documentation](https://era.app/help/mcp-server-era-context): Era Context remote MCP server details, Streamable HTTP endpoint, OAuth setup, tool safety boundaries, and workflow recipes
+- [Server card](https://era.app/.well-known/mcp/server-card.json): Machine-readable server metadata for MCP directories and compatible clients
+- MCP server URL: https://context.era.app — OAuth-protected remote MCP server using Streamable HTTP; the API also accepts the explicit https://context.era.app/mcp endpoint.
+- Tool catalog: 65 production-registered tools; up to 63 available to ordinary assistants depending on plan, OAuth scopes, connected accounts, and MCP client support. Catalog generated 2026-07-13.
+
+## Articles
+
+- [5 things your AI remembers that your budgeting app doesn't](https://era.app/articles/5-things-your-ai-remembers-that-your-budgeting-app-doesnt): Monarch, Copilot, and YNAB lock your AI context inside their app. Era's cross-agent memory means your goals, preferences, and plans follow you everywhere.
+- [Best AI for remembering your finances in 2026](https://era.app/articles/best-ai-for-remembering-your-finances-2026): Comparing Era Context, Mem0, MemoryLake, and generic AI assistants on cross-agent financial memory. Which one remembers your goals and travels with you?
+- [How to set up cross-agent memory for your finances](https://era.app/articles/how-to-set-up-cross-agent-memory): Step-by-step guide to setting up cross-agent memory with Era Context. Tell one AI about your finances and every connected AI knows instantly.
+- [What Era Context stores and how to manage it](https://era.app/articles/what-era-context-stores-and-how-to-manage-it): A transparent look at what Era's AI memory stores about your finances, what your Knowledge page shows, and how to view, edit, or remove any stored fact.
+- [Why your financial AI memory should be portable](https://era.app/articles/why-financial-ai-memory-should-be-portable): When your financial memory lives inside one AI assistant, switching costs you context. Era Context stores your goals in a portable layer any AI can read.
+- [How to text your AI about your money with Poke and Era](https://era.app/articles/how-to-text-your-money-with-poke-and-era): Connect Era Context to Poke and ask about your finances over text. Real bank data, real answers, no app-switching — just send a message.
+- [25 things to ask your AI agent about your finances](https://era.app/articles/what-to-ask-ai-about-your-money): 25 copy-paste prompts for Era Context — from spending analysis to automation rules. See what your AI agent can actually do with your financial data.
+- [How financial advisors can use AI with client data](https://era.app/articles/how-financial-advisors-use-ai-agents): How RIAs and independent financial advisors can use AI assistants with client financial data through Era Context — with consent, scoped permissions, and a full audit trail.
+- [Era vs. Monarch vs. Copilot vs. YNAB: 2026 comparison](https://era.app/articles/era-vs-monarch-vs-copilot-vs-ynab): An honest comparison of Era, Monarch Money, Copilot, and YNAB. See how MCP-native AI integration, automation, pricing, and philosophy differ across the top personal finance platforms.
+- [The future of personal finance is agent-native](https://era.app/articles/what-is-agent-native-finance): Finance apps keep trying to be the place you go. But your AI is already where you are. Agent-native finance means your money shows up in the conversation, not in a separate app.
+- [Subscription creep: how AI detects the charges you forgot about](https://era.app/articles/how-to-find-subscriptions-you-forgot-about): You are paying for subscriptions you forgot about. Era Context lets your AI scan all your accounts and surface every recurring charge in one prompt.
+- [Your agent, your choice: why Era is client-agnostic](https://era.app/articles/how-to-pick-ai-agent-for-your-money): Era works with any MCP-compatible AI client — Claude, ChatGPT, OpenClaw, Gemini, and more. Switch anytime. Your data, rules, and memory stay with Era.
+- [The complete guide to AI-powered financial automations](https://era.app/articles/how-to-automate-finances-with-ai): Describe a financial rule in plain English, and your AI agent creates it. Learn how Era's automation rules categorise, tag, and flag transactions automatically.
+- [Pattern-based rules any agent can create for you](https://era.app/articles/how-to-create-ai-rules-for-your-money): Describe a financial rule in plain English and your AI agent creates it. Auto-categorize transactions, tag spending, detect anomalies — no forms or settings pages.
+- [Using Era Context in a developer workflow](https://era.app/articles/how-developers-use-era-context-mcp): Ask your coding AI about your finances without leaving the terminal. Era Context works with Claude Code, Cursor, VS Code, and any MCP-compatible dev tool.
+- [Introducing cross-agent memory for your finances](https://era.app/articles/can-ai-agents-share-financial-memory): Era's cross-agent memory lets you tell one AI agent about your financial goals and every other agent knows instantly. Your context follows you everywhere.
+- [Era's privacy model: your data, your control](https://era.app/articles/is-it-safe-to-give-ai-your-financial-data): How Era protects your financial data when connecting bank accounts to AI agents. Encryption, OAuth consent, revocable access, and a full activity log.
+- [Connect any AI agent to your bank accounts](https://era.app/articles/how-to-connect-ai-to-your-bank-account): Era Context connects any MCP-compatible AI agent to your bank accounts. One setup for Claude, ChatGPT, OpenClaw, Cursor, Gemini, and more.
+- [How to connect ChatGPT to your finances with Era](https://era.app/articles/how-to-connect-chatgpt-to-your-bank-account): Connect ChatGPT to your bank accounts using Era Context and MCP. See balances, analyze spending, and talk to your money in natural language.
+- [Connecting Claude to your bank account with Era](https://era.app/articles/how-to-connect-claude-to-your-bank-account): Connect Claude Desktop or Claude Code to your bank accounts in under five minutes using Era Context and the Model Context Protocol (MCP).
+- [What is the Model Context Protocol (MCP)?](https://era.app/articles/what-is-mcp): The Model Context Protocol (MCP) is an open standard that lets AI assistants connect to your data and tools. Learn what MCP means for personal finance and why Era built on it.
+- [Introducing Era: AI-native personal finance via MCP](https://era.app/articles/what-is-era-context): Era connects your bank accounts to any AI agent via the Model Context Protocol. Get insights, automate your finances, and let any MCP-compatible AI assistant manage your money securely.
+- [How to add a manual account to Era](https://era.app/articles/how-to-add-manual-accounts-and-set-up-your-budget): Add a manual account to Era from the interface or through your AI in minutes. Track cash, offline loans, and any account without a live bank connection.
+
+## Legal
+
+- [Terms of Service](https://era.app/terms): Terms governing use of the Era platform
+- [Privacy Policy](https://era.app/privacy): How Era handles and protects user data
+
+## Optional
+
+- [Homepage (es-US)](https://era.app/es-US): Era homepage for es-US users
+- [Homepage (en-GB)](https://era.app/en-GB): Era homepage for en-GB users
+- [Homepage (en-CA)](https://era.app/en-CA): Era homepage for en-CA users
+- [Homepage (fr-CA)](https://era.app/fr-CA): Era homepage for fr-CA users
+- [Homepage (pt-BR)](https://era.app/pt-BR): Era homepage for pt-BR users
+- [Homepage (ja-JP)](https://era.app/ja-JP): Era homepage for ja-JP users
+- [Homepage (ko-KR)](https://era.app/ko-KR): Era homepage for ko-KR users
+- [Homepage (hi-IN)](https://era.app/hi-IN): Era homepage for hi-IN users
+- [Homepage (en-SG)](https://era.app/en-SG): Era homepage for en-SG users
+- [Homepage (de-DE)](https://era.app/de-DE): Era homepage for de-DE users

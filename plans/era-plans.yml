@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://era.app/pricing
+currency: USD
+plan_count: 4
+plans:
+- name: Basic
+  price: 0
+  period: month
+  tagline: Your AI can see your money.
+  highlights:
+  - Connect Claude or ChatGPT to view balances and spending
+  - 250 daily agent calls
+- name: Organize
+  price: 7.99
+  period: month
+  tagline: Your AI can tidy your money.
+  highlights:
+  - Edit access
+  - Daily syncs
+  - 200 memory facts
+  - 1,000 daily agent calls
+- name: Automate
+  price: 19.99
+  period: month
+  tagline: Your AI can move your money.
+  highlights:
+  - Syncs every 8 hours
+  - Unlimited memory
+  - 10,000 daily agent calls
+  - Rule-triggered transfers (coming soon)
+- name: Operate
+  price: 79.20
+  period: month
+  tagline: Your AI can run the operation.
+  highlights:
+  - Syncs every 2 hours
+  - Unlimited memory
+  - 25,000 daily agent calls
+  - Support for 500+ accounts

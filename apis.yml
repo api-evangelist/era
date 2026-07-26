@@ -1,8 +1,28 @@
 aid: era
 name: Era
-description: 'Era is a company surfaced as a portfolio company of northzone and added to the API Evangelist
-  network as a stub for enrichment. Sector: fintech; ai. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Era is an AI-native personal finance platform that connects a user''s
+  bank accounts to any MCP-compatible AI assistant — Claude, ChatGPT, Gemini, Cursor,
+  and others — so people can analyze spending, forecast cash flow, automate transaction
+  categorization, and manage money through natural conversation. Every capability is
+  exposed through the Era Context remote MCP server (65 tools over Streamable HTTP,
+  OAuth 2.1) rather than a traditional REST API, with a portable cross-agent memory
+  layer, scoped consent, and hard safety boundaries. Founded in 2023 by Stripe alumni
+  and backed by Northzone, Era is a registered investment adviser targeting the mass-affluent
+  market across the US, UK, and Canada.'
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://era.app/social-card.png
 url: https://raw.githubusercontent.com/api-evangelist/era/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,16 +32,95 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-- Fintech; Ai
-apis: []
+- Fintech
+- Artificial Intelligence
+- Personal Finance
+- Wealth Management
+- Model Context Protocol
+- MCP
+- Agent Native
+- Open Banking
+- OAuth
+apis:
+- name: Era Context MCP Server
+  description: 'Era''s remote Model Context Protocol server. Connect bank accounts to
+    any MCP-compatible AI agent and manage money through natural conversation: spending
+    analysis, cash-flow forecasting, transaction automation, and a portable cross-agent
+    financial memory. 65 production-registered tools over Streamable HTTP, OAuth 2.1.'
+  humanURL: https://era.app/help/mcp-server-era-context
+  baseURL: https://context.era.app
+  tags:
+  - MCP
+  - Personal Finance
+  - Agent Native
+  properties:
+  - type: MCPServer
+    url: mcp/era-mcp.yml
+  - type: Authentication
+    url: authentication/era-authentication.yml
+  - type: OAuthScopes
+    url: scopes/era-scopes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: MCPServer
+  url: mcp/era-mcp.yml
+- type: LLMsTxt
+  url: llms/era-llms.txt
+- type: WellKnown
+  url: well-known/era-well-known.yml
+- type: APICatalog
+  url: well-known/era-api-catalog.json
+- type: SecurityTxt
+  url: well-known/era-security.txt
+- type: Authentication
+  url: authentication/era-authentication.yml
+- type: OAuthScopes
+  url: scopes/era-scopes.yml
+- type: Conventions
+  url: conventions/era-conventions.yml
+- type: Conformance
+  url: conformance/era-conformance.yml
+- type: Plans
+  url: plans/era-plans.yml
+- type: RateLimits
+  url: rate-limits/era-rate-limits.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Security
+  url: https://era.app/context/security
+- type: VulnerabilityDisclosure
+  url: security/era-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/era-domain-security.yml
+- type: DeveloperPortal
+  url: https://era.app/context/finance-mcp
+- type: Documentation
+  url: https://era.app/help/mcp-server-era-context
+- type: APIReference
+  url: https://era.app/.well-known/mcp/server-card.json
+- type: GettingStarted
+  url: https://era.app/help/mcp-server-era-context
+- type: Blog
+  url: https://era.app/articles
+- type: GitHubOrganization
+  url: https://github.com/era-app
+- type: Pricing
+  url: https://era.app/pricing
+- type: TermsOfService
+  url: https://era.app/terms
+- type: PrivacyPolicy
+  url: https://era.app/privacy
 - type: Website
   url: https://era.app
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

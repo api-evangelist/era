@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: generated
+source: https://era.app/help/mcp-server-era-context
+api: mcp/era-mcp.yml
+note: Skills are grounded in Era Context's real published MCP tool catalog (65 tools,
+  2026-07-13). Tool names are verbatim from the public catalog; no operations invented.
+skills:
+- file: era-connect-and-analyze-spending.md
+  name: Connect a bank account and analyze spending
+  api: mcp/era-mcp.yml
+  operations: [connections__connect_bank_account, accounts__list_financial_accounts,
+    accounts__check_account_balance, transactions__list_transactions, insights__analyze_spending,
+    insights__get_cash_flow]
+- file: era-find-forgotten-subscriptions.md
+  name: Find forgotten recurring subscriptions
+  api: mcp/era-mcp.yml
+  operations: [accounts__list_financial_accounts, transactions__list_recurring_charges,
+    transactions__search_transactions]
+- file: era-automate-categorization.md
+  name: Automate transaction categorization with rules
+  api: mcp/era-mcp.yml
+  operations: [transactions__list_spending_categories, transactions__manage_categories,
+    transactions__manage_automation_rules, transactions__manage_transaction_tags]
+- file: era-cross-agent-memory.md
+  name: Set up portable cross-agent financial memory
+  api: mcp/era-mcp.yml
+  operations: [knowledge__remember, knowledge__get_financial_context_and_overview,
+    knowledge__recall_history, knowledge__forget]

@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://era.app/.well-known/api-catalog
+standards:
+- id: mcp
+  conforms: true
+  evidence: Published MCP server card (v1.0, protocolVersion 2024-11-05) and a live
+    Streamable HTTP MCP endpoint at https://context.era.app/mcp
+- id: oauth2
+  conforms: true
+  evidence: OAuth 2.1 authorization-code flow with token/authorization/registration
+    endpoints on forge.era.app
+- id: oauth-pkce-rfc7636
+  conforms: true
+  evidence: code_challenge_methods_supported = [S256] in oauth-authorization-server
+- id: oauth-dynamic-client-registration-rfc7591
+  conforms: true
+  evidence: registration_endpoint present (https://forge.era.app/oauth/register)
+- id: oauth-authorization-server-metadata-rfc8414
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200 on context.era.app
+- id: oauth-protected-resource-metadata-rfc9728
+  conforms: true
+  evidence: /.well-known/oauth-protected-resource returns 200 with scopes_supported
+- id: security-txt-rfc9116
+  conforms: true
+  evidence: /.well-known/security.txt present with Contact/Expires/Canonical fields
+- id: api-catalog-linkset-rfc9727
+  conforms: true
+  evidence: /.well-known/api-catalog returns an application/linkset+json RFC 9727 document
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No published error catalog or application/problem+json contract found

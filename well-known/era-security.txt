@@ -1,0 +1,4 @@
+Contact: mailto:security@era.app
+Expires: 2027-04-13T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://era.app/.well-known/security.txt

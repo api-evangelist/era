@@ -1,0 +1,25 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/v1.0",
+  "version": "1.0",
+  "protocolVersion": "2024-11-05",
+  "serverInfo": {
+    "name": "Era Context",
+    "version": "1.0.0",
+    "description": "AI-native personal finance management. Connect bank accounts, analyze spending, forecast cash flow, automate transactions, and manage your money through natural conversation via MCP.",
+    "homepage": "https://era.app"
+  },
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://context.era.app"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  },
+  "auth": {
+    "type": "oauth2",
+    "authorizationUrl": "https://forge.era.app/oauth/authorize",
+    "tokenUrl": "https://forge.era.app/oauth/token"
+  }
+}
