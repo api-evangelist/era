@@ -6,9 +6,8 @@ server_card: https://era.app/.well-known/mcp/server-card.json
 server:
   name: Era Context
   version: 1.0.0
-  description: AI-native personal finance management. Connect bank accounts, analyze
-    spending, forecast cash flow, automate transactions, and manage your money through
-    natural conversation via MCP.
+  description: AI-native personal finance management. Connect bank accounts, analyze spending, forecast
+    cash flow, automate transactions, and manage your money through natural conversation via MCP.
   homepage: https://era.app
   transport: streamable-http
   url: https://context.era.app
@@ -26,8 +25,6 @@ auth:
   registration_url: https://forge.era.app/oauth/register
   protected_resource: https://context.era.app/mcp
   scopes_doc: well-known/era-context-oauth-protected-resource.json
-# 65 production-registered tools; up to 63 available to ordinary assistants depending
-# on plan, OAuth scopes, connected accounts, and MCP client support (catalog 2026-07-13).
 tool_count: 65
 safety_model:
   read_only: cannot modify data
@@ -146,3 +143,10 @@ tools:
   help:
   - name: help__get_help
     description: Retrieve platform guidance and FAQs
+deployment:
+  mode: remote
+  endpoint: https://context.era.app/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
