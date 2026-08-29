@@ -9,6 +9,17 @@ description: 'Era is an AI-native personal finance platform that connects a user
   layer, scoped consent, and hard safety boundaries. Founded in 2023 by Stripe alumni
   and backed by Northzone, Era is a registered investment adviser targeting the mass-affluent
   market across the US, UK, and Canada.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
