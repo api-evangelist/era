@@ -51,7 +51,7 @@ tags:
 - Personal Finance
 - Wealth Management
 - MCP
-- agent-native
+- Agent Native
 - Open Banking
 - Authentication
 tags_raw:
@@ -76,7 +76,7 @@ apis:
   tags:
   - MCP
   - Personal Finance
-  - agent-native
+  - Agent Native
   tags_raw:
   - MCP
   - Personal Finance
