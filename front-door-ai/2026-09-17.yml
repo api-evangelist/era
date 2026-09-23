@@ -1,0 +1,35 @@
+# Front Door AI Index — era — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: era
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: era.app
+  final_host: era.app
+  ownership: own
+  owner: era
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 81
+  host_score: 81
+  density: 58.11
+  words: 1394
+  tiers:
+    agentic: 30
+    core: 17
+    model: 34
+  ambiguous: 17
+  top_terms:
+    Claude: 19
+    AI: 17
+    agent: 17
+    ChatGPT: 14
+    MCP: 14
+    AI assistant: 9
+    AI agent: 4
+    Gemini: 1
+    copilot: 1
+    model context protocol: 1
+    prompts: 1
