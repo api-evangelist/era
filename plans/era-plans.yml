@@ -38,3 +38,39 @@ plans:
   - Unlimited memory
   - 25,000 daily agent calls
   - Support for 500+ accounts
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units: []
+  plans:
+  - name: Basic
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods:
+    - month
+  - name: Organize
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods:
+    - month
+  - name: Automate
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods:
+    - month
+  - name: Operate
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods:
+    - month
