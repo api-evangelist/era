@@ -64,6 +64,120 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Era is a company surfaced as a portfolio company of northzone and added to the API Evangelist network as a stub for enrichment. Sector: fintech; ai. This profile is a lead awaiting the enrichment pipeline.
+Era is an AI-native personal finance platform that connects a user's bank accounts to any MCP-compatible AI assistant — Claude, ChatGPT, Gemini, Cursor, and others — so people can analyze spending, forecast cash flow, automate transaction categorization, and manage money through natural conversation. Every capability is exposed through the Era Context remote MCP server (65 tools over Streamable HTTP, OAuth 2.1) rather than a traditional REST API, with a portable cross-agent memory layer, scoped consent, and hard safety boundaries. Founded in 2023 by Stripe alumni and backed by Northzone, Era is a registered investment adviser targeting the mass-affluent market across the US, UK, and Canada.
 
-Backed by: northzone — https://era.app
+**Areas:** Company · Fintech · Artificial Intelligence · Personal Finance · Wealth Management · MCP · Agent-Native · Open Banking · Authentication
+
+## Era on APIs.io
+
+Everything profiled for Era is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/era/](https://apis.io/providers/era/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Era Context MCP Server](https://apis.io/apis/era/era-context-mcp-server/) — Era's remote Model Context Protocol server. Connect bank accounts to any MCP-compatible AI agent and manage money through natural conversation: spending…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Era Context](https://apis.io/servers/era/era-context/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Era Authentication](https://apis.io/security/era/era-authentication/)
+- [Era Domain Security](https://apis.io/security/era/era-domain-security/)
+- [Era Vulnerability Disclosure](https://apis.io/security/era/era-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Era Scopes](https://apis.io/scopes/era/era-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Era Plans](https://apis.io/plans/era/era-plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Era Rate Limits](https://apis.io/rate-limits/era/era-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://era.app)
+- [Documentation](https://era.app/help/mcp-server-era-context)
+- [Getting started](https://era.app/help/mcp-server-era-context)
+- [API reference](https://era.app/.well-known/mcp/server-card.json)
+- [Pricing](https://era.app/pricing)
+- [Blog](https://era.app/articles)
+- [Security](https://era.app/context/security)
+- [Terms of service](https://era.app/terms)
+- [Privacy policy](https://era.app/privacy)
+- [GitHub](https://github.com/era-app)
+
+## API Evangelist rating
+
+**Kin Score 41.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 54.2 |
+| Access clarity | 63.2 |
+
+**Agent readiness 33.6** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 35.6** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/era/](https://apis.io/providers/era/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Era: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/era/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
